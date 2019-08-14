@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear evento</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h3>Agregar Nuevo Evento</h3></div>
+        </div>
+        <div class="row">
+            <form method="post" id="formEvento" action="{% url 'eventos:agregarEvento' %}" enctype="multipart/form-data" >
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Nombre</span>
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Categoría</span>
+                    <select name="categoria" class="form-control" style="width: 190px">
+                        <option value="Conferencia">Conferencia</option>
+                        <option value="Seminario">Seminario</option>
+                        <option value="Congreso">Congreso</option>
+                        <option value="Curso">Curso</option>
+                    </select><br />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Lugar</span>
+                    <input id="lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Dirección</span>
+                    <input id="direccion" name="direccion" type="text" placeholder="Direccion" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Fecha inicio</span>
+                    <input id="fecha_ini" name="fecha_ini" type="date" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Fecha fin</span>
+                    <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Tipo</span>
+                    <select name="tipo" class="form-control" style="width: 190px">
+                        <option value="Presencial">Presencial</option>
+                        <option value="Virtual">Virtual</option>
+                    </select><br />
+                </div>
+
+                <input id="send" name="send" type="submit" placeholder="Adicionar" /><br />
+                <a href="{% url 'eventos:index' %}">Cancelar</a>
+            </form>
+        </div>
+</div>
+    <script>
+
+
+        $('form').submit(function (e) {
+            if ($('#nombre').val() == "" || $('#lugar').val() == "" || $('#direccion').val() == "" || $('#fecha_ini').val() == '' || $('#fecha_fin').val() == '') {
+                alert('Hay campos vacios');
+                e.preventDefault();
+            } else if ($('#fecha_ini').val() > $('#fecha_fin').val()) {
+                alert('Ingrese una fecha final posterior a la de inicio');
+                e.preventDefault();
+            } else {
+            var formData = new FormData($('#formEvento')[0]);
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    window.location = "{% url 'eventos:index' %}";
+                },
+            });
+            e.preventDefault();
+
+            };
+        });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+
+        (function() {
+	        $.getJSON( "{% url 'eventos:isLogged' %}" ).done(function( data ) {
+                if (data.message =="no") {
+                    $("#login_user").show();
+                    $("#registro_usuario").show();
+                    $("#agregar_nuevo_evento").hide();
+                    $("#close_session").hide();
+                } else {
+                    $("#login_user").hide();
+                    $("#registro_usuario").hide();
+                    $("#agregar_nuevo_evento").show();
+                    $("#close_session").show();
+                }
+            });
+        }) ();
+
+        function logout() {
+            $.getJSON( "{% url 'eventos:logout' %}" ).done(function( data ) {
+                if (data.message == "ok") {
+                        window.location = "{% url 'eventos:index' %}";
+            } else {
+                        alert("Se presentó un error al salir de la galería");
+                    }
+                });
+            }
+
+    </script>
+
+</head>
+
+    <div class="container">
+        <a href="{% url 'eventos:loginUser' %}" id="login_user">Login</a></br>
+        <a href="{% url 'eventos:registroUsuario' %}" id="registro_usuario">Registrarse</a>
+        <a href="#" id="close_session" onclick="logout();">Logout</a>
+        <div class="row">
+            <div class="col-sm-8" style="background-color:lavender;"><h2>Eventos</h2></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="background-color:lavenderblush;"><h6>Próximos eventos</h6></div>
+            <div class="col-sm-2" style="background-color:lavenderblush;"><a href="{% url 'eventos:agregarNuevoEvento' %}" id="agregar_nuevo_evento"><h6>Agregar Nuevo Evento</h6></a></div></br></br>
+        </div>
+        <div class="row" id="eventos">
+            <ul class="list-group"  style="width: 780px">
+                {% for i in eventos%}
+                    <li class="list-group-item"><a href="{% url 'eventos:verDetalle' pk=i.id %}">{{i.nombre}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

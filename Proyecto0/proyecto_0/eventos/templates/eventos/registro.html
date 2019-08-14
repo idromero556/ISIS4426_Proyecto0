@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+     <script>
+        function sendForm() {
+            if ($('#password').val() != $('#password2').val()) {
+                alert('Las contraseñas no son iguales');
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "{% url 'eventos:agregarUsuario' %}",
+                data: JSON.stringify({ 'username': $('#username').val(), 'password': $('#password').val() }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data){
+                    alert("Usuario registrado: " + $('#username').val());
+                    window.location = "{% url 'eventos:index' %}";
+                },
+                failure: function(errMsg) {
+                    alert("Se presentó un error al adicionar el usuario");
+                }
+            });
+            return false;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;"><h3>Registrarse</h3></div>
+        </div>
+        <div class="row">
+            <form method="post" action="" onsubmit="return sendForm();">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">E-mail</span>
+                    <input id="username" name="username" type="text" placeholder="ejemplo@correo.com" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Contraseña</span>
+                    <input id="password" name="password" type="password" class="form-control" style="width: 190px">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 100px">Contraseña</span>
+                    <input id="password2" name="password2" type="password" class="form-control" style="width: 190px">
+                </div>
+                <input id="send" name="send" type="submit" value="Registrar" />
+                <a href="{% url 'eventos:loginUser' %}">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle evento</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <br>
+        <a href="{% url 'eventos:index' %}">Regresar</a>
+        <br>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavenderblush;"><h3>Detalle del evento</h3></div>
+        </div>
+        <div class="row">
+        <table class="table table-striped" style="width: 292px">
+                <tbody>
+                <tr>
+                    <td><b>Nombre</b></td>
+                    <td>{{evento.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><b>Categoría</b></td>
+                    <td>{{evento.categoria}}</td>
+                </tr>
+                <tr>
+                    <td><b>Lugar</b></td>
+                    <td>{{evento.lugar}}</td>
+                </tr>
+                <tr>
+                    <td><b>Direccion</b></td>
+                    <td>{{evento.direccion}}</td>
+                </tr>
+                <tr>
+                    <td><b>Fecha inicio</b></td>
+                    <td>{{evento.fecha_ini}}</td>
+                </tr>
+                <tr>
+                    <td><b>Fecha fin</b></td>
+                    <td>{{evento.fecha_fin}}</td>
+                </tr>
+                <tr>
+                    <td><b>Tipo</b></td>
+                    <td>{{evento.tipo}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <form action="editarEvento" method="get">
+                <button class = "btn btn-default" name="EditButton" value="{{ evento.id }}" style="width: 80px">Editar</button>
+            </form>
+            <form action="eliminarEvento" method="get">
+                <button class = "btn btn-default" name="DeleteButton" value="{{ evento.id }}" style="width: 80px">Eliminar</button>
+            </form>
+        </div>
+
+
+    </div>
+</body>
+</html>
