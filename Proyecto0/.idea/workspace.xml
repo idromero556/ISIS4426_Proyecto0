@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e263b9dc-a2a1-49b9-9e41-0d40f1be4b23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,17 +15,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proyecto_0/proyecto_0/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+            <state relative-caret-position="258">
+              <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/migrations/0002_evento_user.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+            <state relative-caret-position="255">
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+              <folding>
+                <element signature="e#1#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,19 +120,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/SISRED-Backend/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" selection-end-line="33" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            <state relative-caret-position="93">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -136,6 +138,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reverse</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -147,10 +154,8 @@
         <option value="$PROJECT_DIR$/proyecto_0/eventos/admin.py" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/serializer.py" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/models.py" />
-        <option value="$PROJECT_DIR$/proyecto_0/proyecto_0/settings.py" />
         <option value="$PROJECT_DIR$/proyecto_0/proyecto_0/urls.py" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/url.py" />
-        <option value="$PROJECT_DIR$/proyecto_0/eventos/views.py" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/templates/eventos/index.html" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/templates/eventos/login.html" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/templates/eventos/registro.html" />
@@ -158,6 +163,8 @@
         <option value="$PROJECT_DIR$/proyecto_0/eventos/templates/eventos/detalle.html" />
         <option value="$PROJECT_DIR$/proyecto_0/eventos/templates/eventos/evento_form2.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/proyecto_0/eventos/views.py" />
+        <option value="$PROJECT_DIR$/proyecto_0/proyecto_0/settings.py" />
       </list>
     </option>
   </component>
@@ -183,6 +190,25 @@
             <path>
               <item name="Proyecto0" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proyecto0" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto_0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto0" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto_0" type="462c0819:PsiDirectoryNode" />
+              <item name="eventos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto0" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto_0" type="462c0819:PsiDirectoryNode" />
+              <item name="eventos" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto0" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto_0" type="462c0819:PsiDirectoryNode" />
               <item name="proyecto_0" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -233,18 +259,40 @@
       <workItem from="1565575425075" duration="27683000" />
       <workItem from="1565736900241" duration="5061000" />
       <workItem from="1565831279631" duration="840000" />
-      <workItem from="1565839963067" duration="1649000" />
+      <workItem from="1565839963067" duration="3692000" />
     </task>
+    <task id="LOCAL-00001" summary="requirements.txt">
+      <created>1565842015985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565842015985</updated>
+    </task>
+    <task id="LOCAL-00002" summary="requirements.txt">
+      <created>1565842130978</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565842130978</updated>
+    </task>
+    <task id="LOCAL-00003" summary="requirements.txt">
+      <created>1565842280530</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565842280530</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85838000" />
+    <option name="totallyTimeSpent" value="87881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1250" height="701" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.49172187" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33195364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,6 +340,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements.txt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/venv/lib/python3.6/site-packages/django/urls/conf.py">
@@ -461,23 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proyecto_0/proyecto_0/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/SISRED-Backend/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -485,10 +520,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        <state relative-caret-position="93">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proyecto_0/proyecto_0/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/migrations/0002_evento_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proyecto_0/eventos/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="e#1#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

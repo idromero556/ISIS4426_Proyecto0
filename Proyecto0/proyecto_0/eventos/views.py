@@ -17,7 +17,7 @@ import datetime
 @csrf_exempt
 def agregarUsuarioview(request):
     if request.method == 'POST':
-        jsonUser = json.loads(request.body)
+        jsonUser = json.loads(request.body.decode('utf-8'))
         usuario = jsonUser['username']
         contrasena = jsonUser['password']
 
