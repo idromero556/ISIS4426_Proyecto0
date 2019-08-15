@@ -68,7 +68,7 @@ def agregarNuevoEvento(request):
 @csrf_exempt
 def login_view(request):
     if request.method == 'POST':
-        jsonUser = json.loads(request.body)
+        jsonUser = json.loads(request.body.decode('utf-8'))
         password = jsonUser['password']
         email = jsonUser['username']
         user=authenticate(username=email, password=password)
