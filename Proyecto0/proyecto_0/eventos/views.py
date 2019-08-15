@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.utils import timezone
 
 
 
@@ -22,6 +23,7 @@ def agregarUsuarioview(request):
         contrasena = jsonUser['password']
 
         user_model=User.objects.create_user(username=usuario, password= contrasena)
+        user_model.last_login = timezone.now()
         user_model.save()
 
     return HttpResponse(serializers.serialize("json", [user_model]))
