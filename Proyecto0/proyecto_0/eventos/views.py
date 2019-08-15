@@ -22,9 +22,9 @@ def agregarUsuarioview(request):
         usuario = jsonUser['username']
         contrasena = jsonUser['password']
 
-        user_model=User.objects.create_user(username=usuario, password= contrasena)
-        user_model.last_login = timezone.now()
-        user_model.save(update_fields=['last_login'])
+        user_model=User.objects.create_user(username=usuario, password= contrasena, last_login=timezone.now())
+        #user_model.last_login = timezone.now() update_fields=['last_login']
+        user_model.save()
 
     return HttpResponse(serializers.serialize("json", [user_model]))
 
